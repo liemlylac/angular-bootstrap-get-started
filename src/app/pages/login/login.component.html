@@ -1,1 +1,19 @@
-<p>login works!</p>
+<div class="text-center">
+  <form class="form-login">
+    <img src="{{logoImg}}" alt="{{logoAlt}}" class="logo" width="72" height="72">
+    <h1 class="h1 mb-3 font-weight-normal">Please login</h1>
+    <label for="username" class="sr-only">Username</label>
+    <input id="username" type="text" name="username" class="form-control input-username"
+           placeholder="Username" required autofocus>
+    <label for="password" class="sr-only">Password</label>
+    <input id="password" type="password" name="password" class="form-control input-password"
+           placeholder="Password" required>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me">
+        Remember me
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block">Login</button>
+  </form>
+</div>
