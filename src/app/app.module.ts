@@ -11,7 +11,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { ComponentsModule } from './components/components.module';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { AccessDeniedComponent } from './pages/access-denied/access-denied.component';
+import { ForbiddenComponent } from './pages/forbidden/forbidden.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { AccessDeniedComponent } from './pages/access-denied/access-denied.compo
     AdminLayoutComponent,
     AuthLayoutComponent,
     NotFoundComponent,
-    AccessDeniedComponent
+    ForbiddenComponent,
   ],
   imports: [
     BrowserAnimationsModule,

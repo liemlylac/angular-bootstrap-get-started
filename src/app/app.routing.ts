@@ -22,12 +22,12 @@ const routes: Routes = [
     ]
   },
   {
-    path: '',
+    path: 'auth',
     component: AuthLayoutComponent,
     children: [
       {
         path: '',
-        loadChildren: () => import('./layouts/auth-layout/auth-layout.module').then(m => m.AuthLayoutModule)
+        loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
       }
     ]
   },
