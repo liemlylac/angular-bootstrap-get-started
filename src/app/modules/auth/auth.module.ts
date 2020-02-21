@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from '@app/pages/login/login.component';
-import { RegisterComponent } from '@app/pages/register/register.component';
-import { AuthLayoutRoutes } from './auth-layout.routing';
+import { LoginComponent } from '@pages/login/login.component';
+import { RegisterComponent } from '@pages/register/register.component';
+import { AuthRoutes } from './auth.routing';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { AuthLayoutRoutes } from './auth-layout.routing';
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(AuthLayoutRoutes),
+    RouterModule.forChild(AuthRoutes),
     FormsModule,
     HttpClientModule,
   ]

@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
+import { AdminLayoutComponent } from '@layouts/admin-layout/admin-layout.component';
+import { AuthLayoutComponent } from '@layouts/auth-layout/auth-layout.component';
 
 const routes: Routes = [
   {
@@ -17,7 +17,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
+        loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule)
       }
     ]
   },
@@ -27,7 +27,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+        loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
       }
     ]
   },

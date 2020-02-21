@@ -19,7 +19,10 @@
       "dom"
     ],
     "paths": {
-      "@app/*": ["src/app/*"],
+      "@components/*": ["src/app/components/*"],
+      "@layouts/*": ["src/app/layouts/*"],
+      "@modules/*": ["src/app/modules/*"],
+      "@pages/*": ["src/app/pages/*"],
       "@environments/*": ["src/environments/*"]
     }
   },

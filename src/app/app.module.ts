@@ -7,11 +7,11 @@ import { RouterModule } from '@angular/router';
 import { ButtonsModule } from 'ngx-bootstrap';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
-import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
-import { ComponentsModule } from './components/components.module';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { ForbiddenComponent } from './pages/forbidden/forbidden.component';
+import { AdminLayoutComponent } from '@layouts/admin-layout/admin-layout.component';
+import { AuthLayoutComponent } from '@layouts/auth-layout/auth-layout.component';
+import { ComponentsModule } from '@components/components.module';
+import { NotFoundComponent } from '@pages/not-found/not-found.component';
+import { ForbiddenComponent } from '@pages/forbidden/forbidden.component';
 
 @NgModule({
   declarations: [

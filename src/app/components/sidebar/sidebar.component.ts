@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from '../menu.interface';
 import { Router } from '@angular/router';
 import { MenuItems } from './sidebar.menu';
+import { MenuItem } from '../menu.interface';
 
 @Component({
   selector: 'app-sidebar',
