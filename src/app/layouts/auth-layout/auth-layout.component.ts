@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import { AuthService } from '@modules/auth/auth.service';
 
 @Component({
   selector: 'app-auth-layout',
@@ -7,10 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthLayoutComponent implements OnInit {
 
-  constructor() {
+  constructor(
+    private authService: AuthService,
+    private location: Location,
+  ) {
   }
 
   ngOnInit() {
+  }
+
+  back() {
+    this.location.back();
+    return false;
   }
 
 }
