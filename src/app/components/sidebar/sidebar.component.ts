@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MenuItems } from './sidebar.menu';
-import { MenuItem } from '../menu.interface';
+import { SidebarMenuItem, SidebarMenuItems } from './sidebar-menu-items';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,7 +8,7 @@ import { MenuItem } from '../menu.interface';
 })
 export class SidebarComponent implements OnInit {
 
-  public menuItems: MenuItem[];
+  public menuItems: SidebarMenuItem[];
   public isCollapsed = true;
 
   constructor(
@@ -18,7 +17,7 @@ export class SidebarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.menuItems = MenuItems.filter(menuItem => menuItem);
+    this.menuItems = SidebarMenuItems.filter(menuItem => menuItem);
     this.router.events.subscribe(() => {
       this.isCollapsed = true;
     });
