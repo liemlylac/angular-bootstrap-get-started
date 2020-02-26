@@ -1,4 +1,61 @@
 <div class="main-container">
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <div class="container px-4">
+      <a [routerLink]="['/dashboard']" class="navbar-brand" routerLinkActive="active">
+        <img src="{{logo}}" alt="Bootstrap 4"
+        width="75" height="75">
+      </a>
+      <button (click)="isCollapsed=!isCollapsed" aria-controls="sidenav-collapse-main" class="navbar-toggler">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Collapse header -->
+      <div [collapse]="isCollapsed" class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <div class="navbar-collapse-header d-md-none">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a [routerLink]="['/dashboard']" routerLinkActive="active">
+                <img src="{{logo}}" alt="Bootstrap 4"
+                     width="75" height="75">
+              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button (click)="isCollapsed=!isCollapsed" class="navbar-toggler" type="button">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar -->
+      <ul class="navbar-nav ml-auto">
+        <li *ngFor="let navItem of navItems" class="nav-item">
+          <a [routerLink]="navItem.paths" class="nav-link" [className]="navItem.class" routerLinkActive="active">
+            <span>{{navItem.label}}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <router-outlet></router-outlet>
 </div>
-<footer></footer>
+<footer class="py-5">
+  <div class="container">
+    <div class="row align-items-center justify-content-xl-between">
+      <div class="col-md-6 col-lg-4">
+        &copy; {{ copyrightYear | date: 'yyyy'}}
+        make with <span style="color: red">&hearts;</span> by
+        <a class="font-weight-bold ml-1" href="https://github.com/liemlylac" target="_blank">liemlylac</a>
+      </div>
+      <div class="col-md-6 col-lg-8">
+        <ul class="nav justify-content-center justify-content-xl-end">
+          <li class="nav-item" *ngFor="let footerItem of footerItems">
+            <a [routerLink]="footerItem.paths" class="nav-link" [className]="footerItem.class">
+              {{footerItem.label}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

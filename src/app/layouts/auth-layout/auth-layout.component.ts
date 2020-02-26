@@ -1,25 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
-import { AuthService } from '@modules/auth/auth.service';
+import { AuthNavItem, AuthNavItems } from './auth-nav-items';
+import { AuthFooterItem, AuthFooterItems } from '@layouts/auth-layout/auth-footer-items';
 
 @Component({
   selector: 'app-auth-layout',
   templateUrl: './auth-layout.component.html',
 })
 export class AuthLayoutComponent implements OnInit {
+  isCollapsed: boolean;
+  navItems: AuthNavItem[] = AuthNavItems;
+  copyrightYear = new Date();
+  footerItems: AuthFooterItem[] = AuthFooterItems;
+  logo: 'assets/img/default/bootstrap-solid.svg';
 
   constructor(
-    private authService: AuthService,
-    private location: Location,
   ) {
   }
 
   ngOnInit() {
-  }
-
-  back() {
-    this.location.back();
-    return false;
   }
 
 }

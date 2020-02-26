@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { ButtonsModule } from 'ngx-bootstrap';
+import { ButtonsModule, CollapseModule } from 'ngx-bootstrap';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 import { AdminLayoutComponent } from '@layouts/admin-layout/admin-layout.component';
@@ -30,6 +30,7 @@ import { ForbiddenComponent } from '@pages/forbidden/forbidden.component';
     ButtonsModule,
     AppRoutingModule,
     ComponentsModule,
+    CollapseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
