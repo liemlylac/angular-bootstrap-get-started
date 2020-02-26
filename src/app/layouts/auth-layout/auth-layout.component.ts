@@ -11,7 +11,7 @@ export class AuthLayoutComponent implements OnInit {
   navItems: AuthNavItem[] = AuthNavItems;
   copyrightYear = new Date();
   footerItems: AuthFooterItem[] = AuthFooterItems;
-  logo: 'assets/img/default/bootstrap-solid.svg';
+  logo = 'assets/img/default/bootstrap-solid.svg';
 
   constructor(
   ) {
