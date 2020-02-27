@@ -7,6 +7,9 @@ jobs:
     working_directory: ~/angular-bootstrap-get-started
     docker:
       - image: circleci/node:10-browsers
+    branches:
+      only:
+        - master
     steps:
       # Checkout the code from the branch into the working_directory
       - checkout
@@ -44,3 +47,8 @@ jobs:
       - run:
           name: Build
           command: npm run build
+workflows:
+  version: 0.1
+  nightly:
+    jobs:
+      - test
