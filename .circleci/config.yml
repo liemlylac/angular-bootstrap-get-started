@@ -48,3 +48,8 @@ jobs:
           name: Build
           command: npm run build
 
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
