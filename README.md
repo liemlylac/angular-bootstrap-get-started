@@ -1,6 +1,5 @@
 # AngularBootstrapGetStarted
 [![Github Action](https://github.com/liemlylac/angular-bootstrap-get-started/workflows/Node.js%20CI/badge.svg)](https://github.com/liemlylac/angular-bootstrap-get-started/actions)
-[![Issue Open](https://img.shields.io/github/issues/liemlylac/angular-bootstrap-get-started)](https://github.com/liemlylac/angular-bootstrap-get-started/issues)
 [![Mit License](https://img.shields.io/github/license/liemlylac/angular-bootstrap-get-started)](https://github.com/liemlylac/angular-bootstrap-get-started/blob/master/LICENSE)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9
