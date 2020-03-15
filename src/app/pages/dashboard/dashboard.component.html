@@ -1,1 +1,73 @@
-<p>dashboard works!</p>
+<div class="container">
+    <h2>Users:</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th *ngFor="let ruCol of userCols">{{ruCol}}</th>
+        </tr>
+        <tr *ngIf="isLoadingUsers">
+            <td [colSpan]="userCols.length" class="text-center">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </td>
+        </tr>
+        <tr *ngFor="let user of users">
+            <td>{{user.uuid}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="container">
+    <h2>Contacts:</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th *ngFor="let ruCol of contactCols">{{ruCol}}</th>
+        </tr>
+        <tr *ngIf="isLoadingContact">
+            <td [colSpan]="contactCols.length" class="text-center">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </td>
+        </tr>
+        <tr *ngFor="let contact of contacts">
+            <td>{{contact.user.uuid}}</td>
+            <td>{{contact.user.username}}</td>
+            <td>{{contact.user.firstName}}</td>
+            <td>{{contact.user.lastName}}</td>
+            <td>{{contact.type}}</td>
+        </tr>
+    </table>
+    <div >
+    </div>
+</div>
+
+<div class="container">
+    <h2>Recent User:</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th *ngFor="let ruCol of recentUserCols">{{ruCol}}</th>
+        </tr>
+        <tr *ngIf="isLoadingRecentUser">
+            <td [colSpan]="recentUserCols.length" class="text-center">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </td>
+        </tr>
+        <tr *ngFor="let recentUser of recentUsers">
+            <td>{{recentUser.user.uuid}}</td>
+            <td>{{recentUser.user.username}}</td>
+            <td>{{recentUser.user.firstName}}</td>
+            <td>{{recentUser.user.lastName}}</td>
+            <td>{{recentUser.type}}</td>
+            <td>{{recentUser.time | date: 'hh:mm:ss MMM dd y'}}</td>
+        </tr>
+    </table>
+    <div >
+    </div>
+</div>
+

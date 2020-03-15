@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { DashboardComponent } from '@pages/dashboard/dashboard.component';
 import { ProfileComponent } from '@pages/profile/profile.component';
 import { AdminRoutes } from './admin.routing';
+import { MockModule } from '../../@mock/mock.module';
 
 @NgModule({
   imports: [
@@ -13,6 +14,7 @@ import { AdminRoutes } from './admin.routing';
     RouterModule.forChild(AdminRoutes),
     FormsModule,
     HttpClientModule,
+    MockModule
   ],
   declarations: [
     DashboardComponent,
