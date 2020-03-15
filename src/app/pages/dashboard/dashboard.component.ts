@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Contacts, RecentUsers, User, UserData } from '../../@mock/type/users';
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

@@ -8,13 +8,14 @@ import { ProfileComponent } from '@pages/profile/profile.component';
 import { AdminRoutes } from './admin.routing';
 import { MockModule } from '../../@mock/mock.module';
 
+
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(AdminRoutes),
     FormsModule,
     HttpClientModule,
-    MockModule
+    MockModule,
   ],
   declarations: [
     DashboardComponent,

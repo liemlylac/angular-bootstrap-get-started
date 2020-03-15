@@ -1,6 +1,9 @@
-name: Node.js CI
+name: Angular Cli Testing
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -18,4 +21,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
+    - run: npm run lint
+    - run: npm run test:ci
+    - run: npm run e2e:ci
     - run: npm run build
