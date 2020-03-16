@@ -6,9 +6,9 @@ import { Contacts, RecentUsers, User, UserData } from '../../@mock/type/users';
   templateUrl: './dashboard.component.html',
 })
 export class DashboardComponent implements OnInit {
-  private isLoadingUsers: boolean;
-  private isLoadingContact: boolean;
-  private isLoadingRecentUser: boolean;
+  isLoadingUsers: boolean;
+  isLoadingContact: boolean;
+  isLoadingRecentUser: boolean;
 
   users: User[];
   contacts: Contacts[];
